@@ -1,0 +1,49 @@
+.report-container {
+    width: 100%;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+    margin-bottom: 40px;
+    // background-color: #2b2b2b; /* Set a background color similar to the page */
+    // box-shadow: onset 0 0 50px rgba(0, 0, 0, 0.6); /* Add an inner shadow to blend the image with the background */
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.5; /* Adjust opacity to allow blending */
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send the background image behind other content */
+    filter: blur(10px); /* Optional: Slight blur to soften the image borders */
+  }
+  
+  .overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1; /* Ensure this content is above the background image */
+  }
+  
+  .company-logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+  }
+  
