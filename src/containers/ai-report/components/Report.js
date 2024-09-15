@@ -9,7 +9,7 @@ const Report = () => {
 
     const fetchScores = async () => {
       try {
-        const response = await fetch("http://ai.ampvc.co:2001/submit-all-forms");
+        const response = await fetch("http://127.0.0.1:8000/submit-all-forms");
         const data = await response.json();
 
         if (data.parametric_scoring && data.parametric_scoring.length > 0) {
