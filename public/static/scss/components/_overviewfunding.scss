@@ -5,7 +5,7 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 180px) and (max-width: 320px) {
+@media (min-width: 180px) and (max-width: 410px) {
   .of-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
