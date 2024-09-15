@@ -11,7 +11,7 @@
     z-index: 1;
   }
 
-  @media (min-width: 180px) and (max-width: 320px) {
+  @media (min-width: 180px) and (max-width: 536px) {
     flex-direction: column; /* Stack the input fields vertically for smaller screens */
     // margin-bottom: 50px; /* Add more space between rows */
     // margin-top: 70px;
@@ -458,7 +458,7 @@
   grid-gap: 10px; /* Space between items */
   margin-top: 20px;
 
-  @media (min-width: 180px) and (max-width: 320px) {
+  @media (min-width: 180px) and (max-width: 455px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 992px) and (max-width: 1200px) {
@@ -551,6 +551,10 @@
   flex-direction: column;
   white-space: nowrap;
   text-align: right;
+
+  @media (min-width: 110px) and (max-width: 453px){
+    white-space: inherit;
+  }
 }
 
 .uniqueItem {
@@ -582,7 +586,7 @@
   width: 100%; /* Adjust as per your layout */
   gap: 24px; /* Space between the two sections */
 
-  @media (min-width: 180px) and (max-width: 320px) {
+  @media (min-width: 180px) and (max-width: 618px) {
     flex-direction: column; /* Stack the input fields vertically for smaller screens */
     // margin-bottom: 50px; /* Add more space between rows */
     // margin-top: 70px;
