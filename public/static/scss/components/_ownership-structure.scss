@@ -240,7 +240,7 @@
         min-width: 100px; /* Ensure it doesn't get too narrow */
       }
 
-      @media (min-width: 180px) and (max-width: 320px) {
+      @media (min-width: 180px) and (max-width: 536px) {
         flex-direction: column; /* Stack the input fields vertically for smaller screens */
         margin-bottom: 50px; /* Add more space between rows */
         margin-top: 70px;
@@ -274,7 +274,7 @@
       // }
     }
 
-    @media (min-width: 180px) and (max-width: 320px) {
+    @media (min-width: 180px) and (max-width: 536px) {
       .label-row{
       
         display: none;
