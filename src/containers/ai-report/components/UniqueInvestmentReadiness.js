@@ -4,7 +4,7 @@ function InvestmentReadiness() {
   const [readinessScore, setReadinessScore] = useState(0);
   const fetchParametricScores = async () => {
     try {
-      const response = await fetch("https://ai.ampvc.co/api/v1/submit-all-forms");
+      const response = await fetch("https://www.ai.ampvc.co/api/v1/submit-all-forms");
       const data = await response.json();
       if (data.parametric_scoring && data.parametric_scoring.length > 0) {
         const scores = data.parametric_scoring[0];
