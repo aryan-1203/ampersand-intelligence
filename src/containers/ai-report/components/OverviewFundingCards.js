@@ -7,7 +7,7 @@ const OverviewFundingCards = () => {
 
   const fetchFormData = async () => {
     try {
-      const response = await fetch("https://ai.ampvc.co/api/v1/submit-all-forms");
+      const response = await fetch("https://www.ai.ampvc.co/api/v1/submit-all-forms");
       const data = await response.json();
 
       if (data.company_overview) {
