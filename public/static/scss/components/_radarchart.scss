@@ -31,7 +31,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    z-index: 1; /* Ensure this content is above the background image */
+    z-index: 0; /* Ensure this content is above the background image */
   }
   
   .company-logo img {
