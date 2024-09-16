@@ -65,13 +65,23 @@ const App = () => {
   const handleFinalSubmit = async (payload) => {
     try {
       console.log("Submitting Payload:", payload);
-      await api.post("/submit-all-forms", JSON.stringify(payload), {
+      
+      const response = await fetch("http://127.0.0.1:8000/submit-all-forms", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify(payload),
       });
+  
+      if (response.ok) {
+        alert("Form submitted successfully!"); // Show success alert
+      } else {
+        throw new Error("Failed to submit form");
+      }
     } catch (error) {
       console.error("Error submitting form", error);
+      alert("There was an error submitting the form. Please try again."); // Show error alert
     }
   };
 
