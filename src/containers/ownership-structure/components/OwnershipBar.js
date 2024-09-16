@@ -18,7 +18,7 @@ const OwnershipBar = ({ shareholders }) => {
               transition: "width 0.5s ease",
             }}
           >
-            {shareholder.percentage >= 4 && (
+            {shareholder.percentage >= 3 && (
               <span className="bar-text">{`${shareholder.percentage}%`}</span>
             )}
           </div>
