@@ -65,8 +65,7 @@ const App = () => {
   const handleFinalSubmit = async (payload) => {
     try {
       console.log("Submitting Payload:", payload);
-      
-      const response = await fetch("https://www.ai.ampvc.co/api/v1/submit-all-forms", {
+      const response = await fetch("https://www.ai.ampvc.co/api/v1/submit-all-forms/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +74,7 @@ const App = () => {
       });
     } catch (error) {
       console.error("Error submitting form", error);
-      alert("There was an error submitting the form. Please try again."); // Show error alert
+      alert("There was an error submitting the form. Please try again.");
     }
   };
 
