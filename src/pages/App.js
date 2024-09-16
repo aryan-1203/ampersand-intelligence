@@ -62,7 +62,7 @@ const App = () => {
     }));
   };
 
-  const handleFinalSubmit = async (payload) => {
+ const handleFinalSubmit = async (payload) => {
     try {
       console.log("Submitting Payload:", payload);
       const response = await fetch("https://www.ai.ampvc.co/api/v1/submit-all-forms/", {
