@@ -73,12 +73,6 @@ const App = () => {
         },
         body: JSON.stringify(payload),
       });
-  
-      if (response.ok) {
-        alert("Form submitted successfully!"); // Show success alert
-      } else {
-        throw new Error("Failed to submit form");
-      }
     } catch (error) {
       console.error("Error submitting form", error);
       alert("There was an error submitting the form. Please try again."); // Show error alert
