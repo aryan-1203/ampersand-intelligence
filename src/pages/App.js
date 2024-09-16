@@ -62,19 +62,28 @@ const App = () => {
     }));
   };
 
- const handleFinalSubmit = async (payload) => {
+const handleFinalSubmit = async (payload) => {
     try {
       console.log("Submitting Payload:", payload);
-      const response = await fetch("https://www.ai.ampvc.co/api/v1/submit-all-forms/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+  
+      const response = await axios.post(
+        "https://www.ai.ampvc.co/api/v1/submit-all-forms/",
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+  
+      if (response.status === 200) {
+        console.log("Form submitted successfully");
+        alert("Form submitted successfully!"); // Console alert, but no on-screen alert
+      }
+  
     } catch (error) {
       console.error("Error submitting form", error);
-      alert("There was an error submitting the form. Please try again.");
+      alert("There was an error submitting the form. Please try again."); // Show error on-screen
     }
   };
 
