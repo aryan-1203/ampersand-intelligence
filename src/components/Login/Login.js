@@ -15,16 +15,24 @@ const LoginPage = () => {
   };
 
   const handleLogin = () => {
-    const validUsername = "at@ampvc.co";
-    const validPassword = "welcome123$";
+    const validCredentials = [
+        { username: "at@ampvc.co", password: "welcome123$" },
+        { username: "ir@ampvc.co", password: "ishaR@2024" },
+        { username: "mb@ampvc.co", password: "medhaB@2024" }
+    ];
 
-    if (username === validUsername && password === validPassword) {
-      Cookies.set("isLoggedIn", "true", {expires: 20 / 1440}); 
-      router.push("/"); 
+    const isValidUser = validCredentials.some(
+        (cred) => cred.username === username && cred.password === password
+    );
+
+    if (isValidUser) {
+        Cookies.set("isLoggedIn", "true", { expires: 20 / 1440 });
+        router.push("/");
     } else {
-      setErrorMessage("Invalid username or password");
+        setErrorMessage("Invalid username or password");
     }
-  };
+};
+
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
